@@ -1,3 +1,6 @@
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css);
+
 :root {
 	--transparencycolor:			0,0,0;
 	--transparencyalpha:			0.15;
@@ -64,17 +67,6 @@
 	--status-danger: rgb(var(--dangercolor));
 	--status-danger-background: rgb(var(--dangercolor));
 	--status-danger-text: #fff;
-	--header-primary: rgb(var(--textbrightest));
-	--header-secondary: rgb(var(--textbright));
-	--text-normal: rgb(var(--textbrighter));
-	--text-muted: rgb(var(--textdarker));
-	--channels-default: rgb(var(--textdark));
-	--channel-icon: rgb(var(--textdark));
-	--interactive-normal: rgb(var(--textbright));
-	--interactive-hover: rgb(var(--textbrighter));
-	--interactive-active: rgb(var(--textbrightest));
-	--interactive-muted: rgb(var(--textdarkest));
-	--logo-primary: rgb(var(--textbrightest));
 	--modal-background: rgba(var(--transparencycolor), .2);
 	--modal-footer-background: rgba(var(--transparencycolor), .2);
 	--home-background: transparent;
@@ -847,6 +839,14 @@ button.button-12Fmur.enabled-9OeuTA:hover svg {
 #app-mount .container-2qVG6q.isOpen-2OXbFs {				/* forum				selected post						*/
 	background-color: rgb(var(--accentcolor));
 	text-shadow: 1px 1px var(--textshadow);
+}
+#app-mount .container-2qVG6q.isOpen-2OXbFs .defaultColor-24IHKz,
+#app-mount .container-2qVG6q.isOpen-2OXbFs [style*="color: var(--header-secondary)"] {
+	color: var(--header-primary) !important;
+}
+#app-mount .container-2qVG6q.isOpen-2OXbFs .author-22H8ZU a,
+#app-mount .container-2qVG6q.isOpen-2OXbFs [style*="color: var(--text-muted)"] {
+	color: var(--header-secondary) !important;
 }
 
 /* ----		6.1.	CHANNELHEADER					---- */
@@ -4623,6 +4623,154 @@ img[src="/assets/cef02719c12d8aaf38894c16dca7fbe6.svg"] {	/* rolesettings			addr
 }
 .button-1zW0-r:hover {
 	background-color: rgb(var(--accentcolor));
+}
+
+/* ----		14.2.	USERPOPOUT						---- */
+
+.userPopoutOuter-1OHwPL {									/* popout				container							*/
+	box-shadow: 0 0 0 1px rgba(var(--transparencycolor), .3), 0 2px 10px 0 rgba(var(--transparencycolor), .3);
+}
+.userProfileOuterUnthemed-11rPfA {							/* popout				container							*/
+	background: transparent;
+}
+.userProfileOuterUnthemed-11rPfA::before,
+.userProfileOuterUnthemed-11rPfA::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: unset;
+	height: unset;
+	border-radius: 5px;
+	pointer-events: none;
+	z-index: -1;
+}
+.userProfileOuterUnthemed-11rPfA::before {
+	background: var(--popout) var(--popoutposition)/var(--popoutsize);
+	background-attachment: fixed;
+}
+.userProfileOuterUnthemed-11rPfA::after {
+	background-color: rgba(var(--transparencycolor), calc(var(--transparencyalpha) + 0.25));
+	backdrop-filter: blur(var(--popoutblur));
+}
+.accountProfilePopoutWrapper-3GskID .overlayBackground-2aa7wt {
+	display: block !important;
+}
+.profileColors-2AgAV4 {										/* popout				profilecolors						*/
+	--profile-body-background-color: rgba(0,0,0,.4) !important;
+	--profile-body-divider-color: var(--background-modifier-accent) !important;
+	--profile-body-divider-opacity: 1 !important;
+}
+#app-mount .userProfileOuterThemed-2BgJCM ::-webkit-scrollbar-thumb {
+	background-color: var(--profile-gradient-secondary-color) !important;
+}
+.userProfileInnerThemed-3dLhGM::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background: var(--profile-gradient-primary-color);
+	top: 4px;
+	right: 4px;
+	left: 4px;
+	height: 60px;
+	z-index: 1;
+}
+.userProfileInnerThemed-3dLhGM::before {
+	z-index: 2;
+}
+.userProfileInnerThemed-3dLhGM > * {
+	z-index: 3;
+}
+.userProfileInnerThemedWithBanner-25XGmz::after {
+	height: 120px;
+}
+.userProfileInner-1ngKnf {									/* popout				inner								*/
+	border-radius: 4px;
+}
+.userPopoutOuter-1OHwPL .wrapper-3Un6-K,					/* popout				avatar								*/
+.userPopoutOuter-1OHwPL .avatarWrapper {					/* popout				status everywhere					*/
+	background-color: transparent;
+	border-color: transparent;
+	box-sizing: content-box;
+}
+
+.root-jbEB5E {												/* body					roles								*/
+	max-height: 100px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+#app-mount .root-jbEB5E::-webkit-scrollbar {
+	width: 4px;
+}
+#app-mount .role-2TIOKu {									/* body					role								*/
+	border-color: rgba(var(--textbrighter), .6);
+	border-radius: 5px;
+	padding: 0 5px;
+	position: relative;
+}
+#app-mount .role-2TIOKu[style*="border-color: rgba(185, 187, 190, .6)"] {
+	border-color: rgba(var(--textbrighter), .6) !important;
+}
+#app-mount .rolePillBorder-RiRiuN:not(.actionButton-1YKTU0) {
+	border-width: 0;
+}
+#app-mount .role-2TIOKu .roleName-2ZJJYR {					/* body					rolename							*/
+	position: relative;
+	color: rgb(var(--textbrightest));
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	font-weight: normal;
+	z-index: 1000;
+	pointer-events: none;
+}
+#app-mount .role-2TIOKu .roleRemoveButton-17oXnT {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+#app-mount .role-2TIOKu .roleCircle-3TFUOr {				/* body					rolecircle							*/
+	position: absolute;
+	background-color: rgb(var(--textbrighter));
+	border-radius: 3px;
+	opacity: 0.3;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	left: 0;
+	top: 0;
+}
+#app-mount .role-2TIOKu .roleCircle-3TFUOr[style*="background-color: rgb(185, 187, 190)"] {
+	background-color: rgb(var(--textbrighter)) !important;
+}
+#app-mount .role-2TIOKu .roleCircle-3TFUOr:not(:only-child):hover {
+	opacity: 1;
+	z-index: 2000;
+	cursor: pointer;
+}
+#app-mount .role-2TIOKu .roleRemoveIcon-387wKV {
+	z-index: 2001;
+	pointer-events: none;
+}
+#app-mount .role-2TIOKu .roleIcon-29epUq {
+	z-index: 1;
+}
+
+.textarea-_59yqs:focus {									/* body					note 								*/
+	background-color: rgba(var(--transparencycolor), .2);
+}
+
+#app-mount .wumpusTooltip-15kPrN {
+	background-color: rgb(var(--accentcolor));
+	color: #fff;
+	text-shadow: 1px 1px var(--textshadow);
+}
+#app-mount .wumpusTooltip-15kPrN::after {
+	border-color: transparent rgb(var(--accentcolor)) transparent transparent;
 }
 
 /* ----		14.3.	EMOJIPICKER						---- */
