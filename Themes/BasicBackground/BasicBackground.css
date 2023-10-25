@@ -848,14 +848,6 @@ button.button-12Fmur.enabled-9OeuTA:hover svg {
 	background-color: rgb(var(--accentcolor));
 	text-shadow: 1px 1px var(--textshadow);
 }
-#app-mount .container-2qVG6q.isOpen-2OXbFs .defaultColor-24IHKz,
-#app-mount .container-2qVG6q.isOpen-2OXbFs [style*="color: var(--header-secondary)"] {
-	color: var(--header-primary) !important;
-}
-#app-mount .container-2qVG6q.isOpen-2OXbFs .author-22H8ZU a,
-#app-mount .container-2qVG6q.isOpen-2OXbFs [style*="color: var(--text-muted)"] {
-	color: var(--header-secondary) !important;
-}
 
 /* ----		6.1.	CHANNELHEADER					---- */
 
