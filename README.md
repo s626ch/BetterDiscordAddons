@@ -4,6 +4,10 @@ Allows you to use a Background Image without greatly altering the basic Layout o
 
 like, actually. unlike upstream where itʻs starting to stray from itʻs original vision methinks.
 
+# installation
+copy the contents of "default.css" into your quickCSS, or drop "default.css" as a file into your themes folder
+
+# showcase
 
 Main Page:
 
