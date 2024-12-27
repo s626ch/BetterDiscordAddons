@@ -60,3 +60,5 @@ div[class^="descriptionClamp"]{-webkit-line-clamp: 9999999;max-height:unset!impo
 div[class^="unreadMentionsIndicatorBottom"]{bottom:0!important;}
 div[class^='footer_'],div.channelAppLauncher_df39bd,.container_e5a9ed,.theme-dark [class^='children_']:after{display:none;}
 #vc-spotify-player:hover::before, #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)::before {opacity: 1;filter: brightness(25%) blur(1px)!important;}
+div[class^='chat_'] > div[class^='content_'] > div {background-color:rgba(0,0,0,0.5)!important}
+div[class^='chat_'] > div[class^='content_'] > div > aside > div {background-color:transparent!important}
