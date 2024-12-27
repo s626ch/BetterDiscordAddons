@@ -1,0 +1,62 @@
+@import url("https://goose-nest.github.io/GT-RevertRebrand/RevertRebrand.theme.css"); /* old discord colors */
+@import url("https://raw.githubusercontent.com/s626ch/BetterDiscordAddons/master/Themes/BasicBackground/BasicBackground.css"); /* main theme */
+@import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/main.css"); /* minimal auth app ui */
+/*@import url("https://dablulite.github.io/css-snippets/QuickSwitchV2/import.css"); */ /* uncomment if you want a more minimalist quick switcher */
+@import url("https://raw.githubusercontent.com/MiniDiscordThemes/SettingsIcons/main/SettingsIcons.theme.css"); /* add icons to settings */
+@import url("https://raw.githubusercontent.com/DaBluLite/css-snippets/master/AccountDetailsGrid/import.css");  /* turn account details into a nice grid */
+@import url("https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css"); /* make vencord spotify player look nicer */
+@import url("https://dablulite.github.io/css-snippets/BetterStatusPicker/import.css"); /* this supposedly makes the status picker look nicer, but i donʻt see anything different i gotta be fr, if this theme is broken i might fix it myself later */
+@import url("https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css"); /* changes to forums */
+:root {
+--transparencycolor:0,0,0;/* default:0,0,0*/
+--transparencyalpha:0.0;/* default: 0.15(general darkness of the app)*/
+--messagetransparency:0.5;/* default: 0.5(additional shadows behind messages, set to 0 to remove boxes)*/
+--guildchanneltransparency:0.15;/* default: 0.15(additional darkness for guild/channel list)*/
+--chatinputtransparency:0.0;/* default: 0.0(additional darkness for chat input container)*/
+--memberlisttransparency:0.0;/* default: 0.0(additional darkness for member list)*/
+--accentcolor:119,109,80;/* default: 190,78,180(RGB-format - blurple: 88,101,242 bd-blue: 58,113,193)*/
+--font:"gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+--textshadow:transparent;/* default: transparent(textshadow for text ontop of accentcolor nodes, ONLY accepts a color, no px)*/
+--settingsicons:1;/* Use Settings Icons in User Settings: 1 = yes, 0 = no*/
+--background:url(https://i.liloandstit.ch/stay-cool.png);/* general background image*/
+--backgroundposition:center;/* default: center(position of background - values: [center/top/right/bottom/left])*/
+--backgroundsize:cover;/* default: cover(sizefit of background - values: [cover/contain/auto])*/
+--backgroundblur:unset;/* default: unset(blur in px, only works when --background is set to an image)*/
+--popout:var(--background);/* default: var(--background)(change to use another background/color for modals/popouts)*/
+--popoutposition:var(--backgroundposition);/* default: center(position of popout - values: [center/top/right/bottom/left])*/
+--popoutsize:var(--backgroundsize);/* default: cover(sizefit of popout - values: [cover/contain/auto])*/
+--popoutblur:var(--backgroundblur);/* default: unset(blur in px, only works when --popout is set to an image)*/
+--backdrop:rgba(0,0,0,0.85);/* default: rgba(0,0,0,0.85)(change to use another background/color for backdrops)*/
+--backdropposition:center;/* default: center(position of backdrop - values: [center/top/right/bottom/left])*/
+--backdropsize:cover;/* default: cover(sizefit of backdrop - values: [cover/contain/auto])*/
+--backdropblur:unset;/* default: unset(blur in px, only works when --backdrop is set to an image)*/
+--version1_0_5:none;/* DO NOT CHANGE THIS VARIABLE , USED TO HIDE UPDATE NOTICE (from upstream theme itʻs fucking stupid lol) */
+}
+/* below this line is a bunch of changes i did myself that i genuinely think other people would want */
+.typeWindows__5fa63{display:none;}
+::-webkit-scrollbar {width: 4px !important;height: 4px !important;}
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  border-color: transparent !important;
+  background: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  border: none !important;
+  background-clip: content-box !important;
+  background: rgb(var(--accentcolor)) !important;
+}
+::-webkit-scrollbar-corner {visibility: hidden !important;} 
+.scrollerThemed-2oenus.themeHidden-2yP93k .scroller-2FKFPG::-webkit-scrollbar,
+.scrollerThemed-2oenus.themeHidden-2yP93k .scroller-2FKFPG::-webkit-scrollbar-corner,
+.scrollerThemed-2oenus.themeHidden-2yP93k .scroller-2FKFPG::-webkit-scrollbar-thumb,
+.scrollerThemed-2oenus.themeHidden-2yP93k .scroller-2FKFPG::-webkit-scrollbar-track {
+  display: none !important;
+}
+#app-mount .guilds-2JjMmN .scrollerBase-1Pkza4::-webkit-scrollbar {display: none;}
+a[target="_blank"]{color:rgb(77,129,196)!important;}
+div[class^="descriptionClamp"]{-webkit-line-clamp: 9999999;max-height:unset!important;}
+div[class^="unreadMentionsIndicatorBottom"]{bottom:0!important;}
+div[class^='footer_'],div.channelAppLauncher_df39bd,.container_e5a9ed,.theme-dark [class^='children_']:after{display:none;}
+#vc-spotify-player:hover::before, #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)::before {opacity: 1;filter: brightness(25%) blur(1px)!important;}
